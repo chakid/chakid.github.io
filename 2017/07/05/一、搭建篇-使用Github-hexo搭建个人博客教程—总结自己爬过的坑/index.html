@@ -109,7 +109,7 @@
 
 
   <meta name="description" content="一直想要拥有自己的一个博客，CSDN，那些又觉得不够个性化（主要是觉得逼格不够，哈哈） Github搭建博客的优点：1、不需要域名和服务器2、访问自己博客的时候没有广告3、可以自己修改样式，能根据自己的需求加功能。 首先来一篇预览的博客，让大家看看效果：这是我自己用Github搭建的：https://chakid.github.io/  *以下操作基于Windows环境 首先博客搭建的环境﻿  n">
-<meta name="keywords" content="Blog,hexo,Github">
+<meta name="keywords" content="hexo,Blog,Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一、搭建篇 --使用Github+hexo搭建个人博客教程—总结自己爬过的坑">
 <meta property="og:url" content="http://yoursite.com/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/index.html">
@@ -375,7 +375,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/" itemprop="commentsCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -459,9 +459,9 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
       
         <div class="post-tags">
           
-            <a href="/tags/Blog/" rel="tag"># Blog</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
           
             <a href="/tags/Github/" rel="tag"># Github</a>
           
@@ -516,11 +516,7 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -827,44 +823,31 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: '',
-            repo: '',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '1017983a444f394b90fd120a95a1cc71016e6961',
-            
-                client_id: '53f89caaeb2c04a4d4b1'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'mxY9okWngT3PC9wwh9amgB84-gzGzoHsz',
+        appKey: 'x4dTiDqIx5DoSCLEU8K24GrI',
+        placeholder: 'Jヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

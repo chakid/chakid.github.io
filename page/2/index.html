@@ -363,6 +363,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/05/关于在使用Git切换不同的用户提交代码时遇到问题的解决办法/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/05/关于在使用Git切换不同的用户提交代码时遇到问题的解决办法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -520,6 +530,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/05/一、搭建篇-使用Github-hexo搭建个人博客教程—总结自己爬过的坑/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -680,6 +700,16 @@ Github搭建博客的优点：1、不需要域名和服务器2、访问自己博
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/04/我的第一篇博客/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/07/04/我的第一篇博客/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1048,20 +1078,31 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'mxY9okWngT3PC9wwh9amgB84-gzGzoHsz',
+        appKey: 'x4dTiDqIx5DoSCLEU8K24GrI',
+        placeholder: 'Jヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

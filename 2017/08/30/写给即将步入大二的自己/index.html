@@ -109,7 +109,7 @@
 
 
   <meta name="description" content="还有几天就要开学了，索性提前几天来到学校，以便让自己能早点进入状态， 最近和家里说了一些关于以后工作的事，虽然可能觉得工作还早，其实不然。对于即将步入大二的我，也就还只有一两年的时间了，试想两年后我就要步入社会，一个人独自面对太多的事，不免有些惊讶，在自己的潜意识里自己还只是一个初生牛犊不怕虎的少年，那天姐和我说要我毕业了直接到留在长沙，但是我自己还是想去北上广闯堂一番的，但是家里人并认为这是一">
-<meta name="keywords" content="Blog,hexo">
+<meta name="keywords" content="hexo,Blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="写给即将步入大二的自己">
 <meta property="og:url" content="http://yoursite.com/2017/08/30/写给即将步入大二的自己/index.html">
@@ -366,7 +366,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/08/30/写给即将步入大二的自己/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/08/30/写给即将步入大二的自己/" itemprop="commentsCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/08/30/写给即将步入大二的自己/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -424,9 +424,9 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
       
         <div class="post-tags">
           
-            <a href="/tags/Blog/" rel="tag"># Blog</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/Blog/" rel="tag"># Blog</a>
           
         </div>
       
@@ -479,11 +479,7 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -765,44 +761,31 @@ conf: 'prod_5c1fe0b8c20838e78fb3aae9832b6695'
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitmint({
-            id: window.location.pathname,
-            owner: '',
-            repo: '',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
-            
-            oauth: {
-            
-            
-                client_secret: '1017983a444f394b90fd120a95a1cc71016e6961',
-            
-                client_id: '53f89caaeb2c04a4d4b1'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'mxY9okWngT3PC9wwh9amgB84-gzGzoHsz',
+        appKey: 'x4dTiDqIx5DoSCLEU8K24GrI',
+        placeholder: 'Jヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
