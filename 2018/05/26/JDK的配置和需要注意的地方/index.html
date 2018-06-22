@@ -114,7 +114,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/05/26/JDK的配置和需要注意的地方/index.html">
 <meta property="og:site_name" content="十里枯木的部落阁">
 <meta property="og:description" content="假设JDK安装路径：E:\Program Files\Java\jdk1.6.0_05以下的变量可以设置成用户变量，业可以设置成系统变量。他们的区别只是使用权限的问题而已。 第一种方法：建立两个变量：变量名：PATH变量值：E:\Program Files\Java\jdk1.6.0_05\bin变量名：CLASSPATH变量值：.;E:\Program Files\Java\jdk1.6.0_0">
-<meta property="og:updated_time" content="2018-05-26T08:11:54.952Z">
+<meta property="og:updated_time" content="2018-06-22T08:42:59.948Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDK的配置和需要注意的地方">
 <meta name="twitter:description" content="假设JDK安装路径：E:\Program Files\Java\jdk1.6.0_05以下的变量可以设置成用户变量，业可以设置成系统变量。他们的区别只是使用权限的问题而已。 第一种方法：建立两个变量：变量名：PATH变量值：E:\Program Files\Java\jdk1.6.0_05\bin变量名：CLASSPATH变量值：.;E:\Program Files\Java\jdk1.6.0_0">
@@ -349,12 +349,24 @@
                 
               
 
-              <time title="创建时间：2018-05-26 16:02:24 / 修改时间：16:11:54" itemprop="dateCreated datePublished" datetime="2018-05-26T16:02:24+08:00">2018-05-26</time>
+              <time title="创建时间：2018-05-26 16:02:24" itemprop="dateCreated datePublished" datetime="2018-05-26T16:02:24+08:00">2018-05-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-22 16:42:59" itemprop="dateModified" datetime="2018-06-22T16:42:59+08:00">2018-06-22</time>
               
             
           </span>
@@ -399,8 +411,8 @@
       
         <p>假设JDK安装路径：<br>E:\Program Files\Java\jdk1.6.0_05<br>以下的变量可以设置成用户变量，业可以设置成系统变量。他们的区别只是使用权限的问题而已。</p>
 <h4 id="第一种方法："><a href="#第一种方法：" class="headerlink" title="第一种方法："></a>第一种方法：</h4><p>建立两个变量：<br>变量名：PATH<br>变量值：E:\Program Files\Java\jdk1.6.0_05\bin<br>变量名：CLASSPATH<br>变量值：.;E:\Program Files\Java\jdk1.6.0_05\lib\tools.jar;E:\Program Files\Java\jdk1.6.0_05\jre\lib\dt.jar<br>【注意开头是句号加分好】</p>
-<h4 id="第二种方法："><a href="#第二种方法：" class="headerlink" title="第二种方法："></a>第二种方法：</h4><p>建立三个环境变量<br>变量名：JAVA_HOME<br>变量值：E:\Program Files\Java\jdk1.6.0_05   注：JDK安装路径<br>变量名：PATH<br>变量值：%JAVA_HOME%\bin<br>变量名：CLASSPATH<br>变量值：.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\dt.jar（;</p>
-<font color="red">%JAVA_HOME%\jre\lib\dt.jar 自己在配置的时候没有配置这个，现在还不知道这个的作用）</font>
+<h4 id="第二种方法："><a href="#第二种方法：" class="headerlink" title="第二种方法："></a>第二种方法：</h4><p>建立三个环境变量<br>变量名：JAVA_HOME<br>变量值：E:\Program Files\Java\jdk1.6.0_05   注：JDK安装路径<br>变量名：PATH<br>变量值：%JAVA_HOME%\bin<br>变量名：CLASSPATH<br>变量值：.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\jre\lib\dt.jar</p>
+<font color="red">（;%JAVA_HOME%\jre\lib\dt.jar 自己在配置的时候没有配置这个，现在还不知道这个的作用）</font>
 
 <p>【注意开头是句号加分好】</p>
 <font color="red"><strong>注：本人在配置CLASSPATH的时候，变量值前面没加 “  .; “ 才成功，在前人的帖子也有人说不加 “  .; “ 才可以。</strong></font>
